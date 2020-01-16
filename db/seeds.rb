@@ -8,3 +8,7 @@
 Ingredient.create(name: "lemon")
 Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
+
+Cocktail.create(name: "cocktail")
+
+Dose.create(description: "2cup", ingredient: Ingredient.find_by(name: "lemon"), cocktail: Cocktail.first)
