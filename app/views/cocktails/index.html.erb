@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_url("cocktail.jpeg") %>);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_url("cocktail.jpg") %>);">
   <div class="container">
     <h1>Cocktail Recipes</h1>
     <p>make cocktail and enjoy drink</p>
@@ -8,7 +8,7 @@
 
 <div class="cards">
 <% @cocktails.each do |cocktail| %>
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_url("cocktail.jpeg") %>);">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_url("cocktail.jpg") %>);">
     <h2>
     <%= link_to cocktail.name, cocktail_path(cocktail) %>
     </h2>
