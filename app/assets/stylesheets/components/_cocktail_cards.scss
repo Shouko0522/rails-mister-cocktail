@@ -1,10 +1,30 @@
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 50px 50px 50px 50px;
   grid-auto-rows: 200px;
   grid-gap: 16px;
-  margin: 50px;
-  text-align: center;
+  margin: 80px;
+}
+
+.card-category{
+  position: relative;
+  h2 {
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  margin: 5px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-category:hover {
+  h2 {
+    color: green;
+  }
 }
 
 // Smallest device
@@ -38,6 +58,6 @@
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .cards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }

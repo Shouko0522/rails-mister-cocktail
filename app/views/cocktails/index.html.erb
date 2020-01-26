@@ -1,5 +1,5 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_url("bg.jpg") %>); background-size: initial;">
-  <div class="container">
+  <div class="inside">
     <h1>Cocktail Recipes</h1>
     <p>make cocktail and enjoy drink</p>
     <%= link_to "Add new cocktail", new_cocktail_path(@cocktail), class: "btn btn-primary btn-flat"  %>
@@ -7,12 +7,9 @@
 </div>
 
 <div class="cards">
-<% @cocktails.each do |cocktail| %>
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_url("cocktail.jpg") %>);">
-    <h2>
-    <%= link_to cocktail.name, cocktail_path(cocktail) %>
-    </h2>
-  </div>
-<% end %>
+  <% @cocktails.each do |cocktail| %>
+    <a class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_url("cocktail.jpg") %>); background-position: center; background-size: cover" href=<%= cocktail_path(cocktail) %>>
+      <h2><%= cocktail.name %></h2>
+    </a>
+  <% end %>
 </div>
-
