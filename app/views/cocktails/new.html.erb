@@ -1,9 +1,12 @@
 <div class="new_banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_url("cocktail2.jpg") %>);">
   <div class="container">
-    <%= simple_form_for(@cocktail) do |f| %>
-      <%= f.input :name %>
-      <%= f.submit class: 'btn btn-primary' %>
-  <% end %>
+    <div class="cocktail_card">
+      <%= form_for(@cocktail) do |f| %>
+        <div><%= f.label :create_cocktail %></div>
+        <div><%= f.text_field :name%></div>
+        <div style="margin-top: 1rem; "><%= f.submit "Submit", class: "btn btn-primary btn-flat" %></div>
+      <% end %>
+    </div>
 
   </div>
 </div>
